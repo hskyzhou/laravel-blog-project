@@ -1,0 +1,37 @@
+{
+  "name": "hsky",
+  "version": "1.0.0",
+  "authors": [
+    "wen.zhou <wen.zhou@bioon.com>"
+  ],
+  "description": "hsky博客js",
+  "keywords": [
+    "hsky博客"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "angularjs": "~1.4.3",
+    "angular-route": "~1.4.3",
+    "bootstrap": "~3.3.5",
+    "angular-sanitize": "~1.4.3",
+    "angular-ui-router": "~0.2.15",
+    "angular-touch": "~1.4.3",
+    "oclazyload": "~1.0.3",
+    "angular-ui-bootstrap": "~0.13.1",
+    "bootstrap-switch": "~3.3.2",
+    "jquery.nicescroll": "~3.6.0",
+    "angular-datatables": "~0.4.3",
+    "angular-resource": "~1.4.4",
+    "ngSticky": "~1.7.11",
+    "angular-ui-select2": "~0.0.5",
+    "ui-select": "*"
+  }
+}

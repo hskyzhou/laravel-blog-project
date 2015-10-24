@@ -1,0 +1,81 @@
+/*!
+ laypage默认样式
+*/
+
+.laypage_main{font-size:0; clear:both; color:#666;}
+.laypage_main *{display:inline-block; vertical-align: top; font-size:12px;}
+.laypage_main a{height:26px; line-height:26px; text-decoration:none; color:#666;}
+.laypage_main a, .laypage_main span{margin:0 3px 6px; padding:0 10px;}
+.laypage_main span{height:26px; line-height:26px;}
+.laypage_main input, .laypage_main button{ border:1px solid #ccc; background-color:#fff;}
+.laypage_main input{width:40px; height:26px; line-height:26px; margin:0 5px; padding:0 5px;}
+.laypage_main button{height:28px; line-height:28px; margin-left:5px; padding:0 10px; color:#666;}
+
+/* 默认皮肤 */
+.laypageskin_default a{border:1px solid #ccc; background-color:#fff;}
+.laypageskin_default span{height:28px; line-height:28px; color:#999; }
+.laypageskin_default .laypage_curr{font-weight:700; color:#666;}
+
+/* 墨绿 */
+.laypageskin_molv a, .laypageskin_molv span{padding:0 12px; border-radius:2px;}
+.laypageskin_molv a{ background-color:#f1eff0; }
+.laypageskin_molv .laypage_curr{background-color:#00AA91; color:#fff;}
+.laypageskin_molv input{height:24px; line-height:24px;}
+.laypageskin_molv button{height:26px; line-height:26px;}
+
+/* 雅黑 */
+.laypageskin_yahei{color:#333}
+.laypageskin_yahei a, .laypageskin_yahei span{padding:0 13px; border-radius:2px; color:#333}
+.laypageskin_yahei .laypage_curr{background-color:#333; color:#fff;}
+
+/* 自定义 */
+.laypageskin_pager{
+	margin: 20px;
+    padding: 0;
+    text-align: center;
+}
+.laypageskin_pager a,.laypageskin_pager span {
+     -moz-border-radius: 70px 20px 38px 20px / 20px 30px 10px 10px;
+     -webkit-border-radius: 70px 20px 38px 20px / 20px 30px 10px 10px;
+     border-radius: 70px 20px 38px 20px / 20px 30px 10px 10px;
+     background: #232B30; /* old browsers */
+     background: -moz-linear-gradient(top, #3D4850 3%, #313d45 4%, #232B30 100%); /* firefox */
+     background: -webkit-gradient(linear, left top, left bottom, color-stop(3%,#3D4850), color-stop(4%,#313d45), color-stop(100%,#232B30)); /* webkit */
+     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3D4850', endColorstr='#232B30',GradientType=0 ); /* ie */
+     -moz-box-shadow: 1px 1px 1px rgba(0,0,0,0.2); /* Firefox */
+     -webkit-box-shadow: 1px 1px 1px rgba(0,0,0,0.2); /* Safari, Chrome */
+     box-shadow: 1px 1px 1px rgba(0,0,0,0.2); /* CSS3 */
+     color: #FFFFFF;
+     font-size: 12px;
+     margin-left: 10px;
+     padding: 3px 12px;
+     -webkit-transition: all 0.5s ease-in 0s;
+     -moz-transition: all 0.5s ease-in 0s;
+     -o-transition: all 0.5s ease-in 0s;
+     transition: all 0.5s ease-in 0s;
+     text-decoration: none;
+     outline: none;
+     -moz-outline:none;
+     zoom:1;
+ }
+ .laypageskin_pager span.laypage_curr{
+	 -moz-border-radius:20px 30px 10px 10px / 70px 20px 38px 20px;
+	 -webkit-border-radius:20px 30px 10px 10px / 70px 20px 38px 20px;
+	 border-radius:20px 30px 10px 10px / 70px 20px 38px 20px;
+	 color: #d54e21;
+	 font-weight: bold;
+ }
+ .laypageskin_pager a:hover{
+ 	-moz-border-radius:20px 30px 10px 10px / 70px 20px 38px 20px;
+     -webkit-border-radius:20px 30px 10px 10px / 70px 20px 38px 20px;
+     border-radius:20px 30px 10px 10px / 70px 20px 38px 20px;
+     background: #4C5A64; /* old browsers */
+     background: -moz-linear-gradient(top, #4C5A64 3%, #404F5A 4%, #2E3940 100%); /* firefox */
+     background: -webkit-gradient(linear, left top, left bottom, color-stop(3%,#4C5A64), color-stop(4%,#404F5A), color-stop(100%,#2E3940)); /* webkit */
+     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4C5A64', endColorstr='#2E3940',GradientType=0 ); /* ie */
+     color: #d54e21;
+ }
+
+/* 一般用于信息流加载 */
+.laypageskin_flow{text-align:center;}
+.laypageskin_flow .page_nomore{color:#999}

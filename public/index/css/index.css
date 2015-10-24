@@ -1,0 +1,78 @@
+@charset "UTF-8";
+.media-title{
+    margin: 0;
+    line-height: 1em;
+}
+.media-title h2{
+    font-size: 2.5em;
+    font-family: 'Roboto Slab',serif;
+    font-weight: 400;
+    color: #303030;
+}
+.media-title h2 a{
+    color: #303030;
+}
+.media-title h2 a:hover{
+    text-decoration: none;
+    color: #00ada7;
+    outline: 0;
+}
+.media-meta{
+    font-style: italic;
+    color: #959595;
+    margin: 14px 0 0;
+}
+.media-meta span.author{
+    margin: 0 7px;
+    white-space: nowrap;
+}
+.media-meta span.author a:hover{
+    text-decoration: underline;
+}
+
+.meta-info{
+    line-height: 28px;
+}
+.meta-info a{
+     color: #959595;
+     margin-left: 7px;
+ }
+.meta-info a:hover{
+    color: #00ada7;
+    margin-left: 7px;
+    text-decoration: underline;
+}
+.search-form label{
+    display: none;
+}
+.search-form input{
+    width: 84%;
+    padding: 7px 7px;
+    border: 1px solid #ebebeb;
+    height: 40px;
+    line-height: 40px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+.search-form .search-submit{
+    width: 14%;
+    height: 40px;
+}
+.btn-default, input[type="submit"]{
+    border: 1px solid #00ada7;
+    background: #00ada7;
+}
+.btn-default:hover{
+    border: 1px solid #303030;
+    background: #303030;
+    color: #ffffff;
+}
