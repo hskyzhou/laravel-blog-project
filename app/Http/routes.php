@@ -50,3 +50,4 @@ Route::group(['namespace' => 'Front', 'prefix' => 'hsky'], function(){
 /**/
 // Route::controller('menu', 'MenuController');
 
+
