@@ -1,4 +1,4 @@
-MetronicApp.controller('ArticleListController',['$rootScope', '$scope', '$http', '$timeout', 'DTOptionsBuilder', 'DTColumnBuilder', '$compile', '$stateParams', function($rootScope, $scope, $http, $timeout, DTOptionsBuilder, DTColumnBuilder, $compile, $stateParams) {
+MetronicApp.controller('ArticleListController',['$rootScope', '$scope', '$http', '$timeout', 'DTOptionsBuilder', 'DTColumnBuilder', '$compile', function($rootScope, $scope, $http, $timeout, DTOptionsBuilder, DTColumnBuilder, $compile) {
     $scope.$on('$viewContentLoaded', function() {   
         // initialize core components
         Metronic.initAjax();
