@@ -200,7 +200,7 @@ class MenuController extends Controller
      * @return		
      */
     public function getEdit(){
-    	$id = request('id', 2);
+    	$id = request('id', 0);
     	
     	if(is_numeric($id) && !empty($id)){
     		$menu = Menu::find($id);
@@ -253,10 +253,15 @@ class MenuController extends Controller
                 ];
             }else{
                 $returnData = [
-                    'status' => true,
-                    'msg' => '修改成功'
+                    'status' => false,
+                    'msg' => '修改失败'
                 ];
             }
+        }else{
+            $returnData = [
+                'status' => false,
+                'msg' => '获取错误'
+            ];
         }
 
         return response()->json($returnData);

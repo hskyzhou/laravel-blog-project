@@ -149,5 +149,36 @@ class PermissionSeeder extends Seeder
             'slug' => 'login.backend',
             'description' => '登录后台', // optional
         ]);
+
+        /*文章*/
+        $articleManage = Permission::create([
+            'name' => 'Show Articles Manage',
+            'slug' => 'show.article.manage',
+            'description' => '显示文章管理', // optional
+        ]);
+
+        $userList = Permission::create([
+            'name' => 'Show Article List',
+            'slug' => 'show.article.list',
+            'description' => '显示文章列表', // optional
+        ]);
+
+        $articleUpdate = Permission::create([
+            'name' => 'Update Articles',
+            'slug' => 'update.articles',
+            'description' => '修改文章', // optional
+        ]);
+
+        $articleAdd = Permission::create([
+            'name' => 'Add Articles',
+            'slug' => 'add.articles',
+            'description' => '添加文章', // optional
+        ]);
+
+        $articleDelete = Permission::create([
+            'name' => 'Delete Articles',
+            'slug' => 'delete.articles',
+            'description' => '删除文章', // optional
+        ]);
     }
 }

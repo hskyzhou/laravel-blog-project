@@ -51,7 +51,7 @@ class UserController extends Controller
      * @return        
      */
     public function getList(){
-    	return view('admin.role.index');
+    	return view('admin.user.index');
     }
 
     /**

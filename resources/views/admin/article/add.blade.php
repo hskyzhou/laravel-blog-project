@@ -1,4 +1,4 @@
-<div id="ArticleController">
+<div ng-controller="ArticleListController">
 	<ul>
 		<li ng-repeat="error in errors">
 			@{{error}}			

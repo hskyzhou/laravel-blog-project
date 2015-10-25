@@ -346,7 +346,8 @@ MetronicApp.config(['$stateProvider', '$urlRouterProvider', '$locationProvider',
                 }]
             }
         })
-
+    
+        /*user*/
         .state('user', {
             url: "/user",
             templateUrl: "/user/ng-index",
@@ -415,29 +416,150 @@ MetronicApp.config(['$stateProvider', '$urlRouterProvider', '$locationProvider',
                 }]
             }
         })
-        // UI Bootstrap
+        // article
         .state('article', {
-            url: "/add",
-            templateUrl: "/article/ng_add",
-            data: {pageTitle: '文章管理'},
-            controller: "ArticleController",
+            url: "/article",
+            templateUrl: "/article/ng-index",
+            data: {pageTitle: 'AngularJS File Upload'},
+            // controller: "GeneralPageController",
             resolve: {
                 deps: ['$ocLazyLoad', function($ocLazyLoad) {
                     return $ocLazyLoad.load([
+                    {
+                        name: 'MetronicApp',
+                        files: [
+                            
+                        ]
+                    }]);
+                }]
+            }
+        })
+
+        .state('article.add', {
+            url: "/add",
+            templateUrl: "/article/ng-add",
+            data: {pageTitle: '文章管理'},
+            controller: "ArticleListController",
+            resolve: {
+                deps: ['$ocLazyLoad', function($ocLazyLoad) {
+                    return $ocLazyLoad.load([
+                        {
+                            name: 'ui.select',
+                            insertBefore: '#ng_load_plugins_before', // load the above css files before '#ng_load_plugins_before'
+                            files: [
+                                '../../../components/angular-ui-select/dist/select.min.js',
+                                '../../../components/angular-ui-select/dist/select.min.css'
+                            ]   
+                        },
+                        {
+                            name: 'datatables',
+                            insertBefore: '#ng_load_plugins_before', // load 
+                            files: [
+                                '../../../components/datatables/media/css/jquery.dataTables.min.css',
+                                '../../../components/datatables/media/css/dataTables.bootstrap.min.css',
+
+                                '../../../components/datatables/media/js/jquery.dataTables.min.js',
+                                '../../../components/angular-datatables/dist/angular-datatables.min.js',
+                                '../../../components/datatables/media/js/dataTables.bootstrap.min.js',
+                            ] 
+                        },
                         {
                             name: 'MetronicApp',
                             insertBefore: '#ng_load_plugins_before', // load the above css files before '#ng_load_plugins_before'
                             files: [
                                 '../../../editor.md-master/css/editormd.min.css',
                                 '../../../editor.md-master/editormd.min.js',
-                                '../../../js/controllers/ArticleController.js',
+                                '../../../js/controllers/ArticleListController.js',
+                            ]   
+                        },
+                    ]);
+                }] 
+            }
+        })
+        .state('article.update', {
+            url: "/update?id",
+            templateUrl: function(stateParams){
+                return "/article/ng-update?id=" + stateParams.id;
+            },
+            data: {pageTitle: '文章修改'},
+            controller: "ArticleListController",
+            resolve: {
+                deps: ['$ocLazyLoad', function($ocLazyLoad) {
+                    return $ocLazyLoad.load([
+                        {
+                            name: 'ui.select',
+                            insertBefore: '#ng_load_plugins_before', // load the above css files before '#ng_load_plugins_before'
+                            files: [
+                                '../../../components/angular-ui-select/dist/select.min.js',
+                                '../../../components/angular-ui-select/dist/select.min.css'
+                            ]   
+                        },
+                        {
+                            name: 'datatables',
+                            insertBefore: '#ng_load_plugins_before', // load 
+                            files: [
+                                '../../../components/datatables/media/css/jquery.dataTables.min.css',
+                                '../../../components/datatables/media/css/dataTables.bootstrap.min.css',
+
+                                '../../../components/datatables/media/js/jquery.dataTables.min.js',
+                                '../../../components/angular-datatables/dist/angular-datatables.min.js',
+                                '../../../components/datatables/media/js/dataTables.bootstrap.min.js',
+                            ] 
+                        },
+                        {
+                            name: 'MetronicApp',
+                            insertBefore: '#ng_load_plugins_before', // load the above css files before '#ng_load_plugins_before'
+                            files: [
+                                '../../../editor.md-master/css/editormd.min.css',
+                                '../../../editor.md-master/editormd.min.js',
+                                '../../../js/controllers/ArticleListController.js',
+                            ]
+                        },
+                    ]);
+                }] 
+            }
+        })
+        .state('article.list', {
+            url: "/list",
+            templateUrl: "/article/ng-list",
+            data: {pageTitle: '文章列表'},
+            controller: "ArticleListController",
+            resolve: {
+                deps: ['$ocLazyLoad', function($ocLazyLoad) {
+                    return $ocLazyLoad.load([
+                        {
+                            name: 'ui.select',
+                            insertBefore: '#ng_load_plugins_before', // load the above css files before '#ng_load_plugins_before'
+                            files: [
+                                '../../../components/angular-ui-select/dist/select.min.js',
+                                '../../../components/angular-ui-select/dist/select.min.css'
+                            ]   
+                        },
+                        {
+                            name: 'datatables',
+                            insertBefore: '#ng_load_plugins_before', // load 
+                            files: [
+                                '../../../components/datatables/media/css/jquery.dataTables.min.css',
+                                '../../../components/datatables/media/css/dataTables.bootstrap.min.css',
+
+                                '../../../components/datatables/media/js/jquery.dataTables.min.js',
+                                '../../../components/angular-datatables/dist/angular-datatables.min.js',
+                                '../../../components/datatables/media/js/dataTables.bootstrap.min.js',
+                            ] 
+                        },
+                        {
+                            name: 'MetronicApp',
+                            insertBefore: '#ng_load_plugins_before', // load the above css files before '#ng_load_plugins_before'
+                            files: [
+                                '../../../editor.md-master/css/editormd.min.css',
+                                '../../../editor.md-master/editormd.min.js',
+                                '../../../js/controllers/ArticleListController.js',
                             ]   
                         },
                     ]);
                 }] 
             }
         });
-    
         
 }]);
 

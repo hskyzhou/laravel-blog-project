@@ -89,5 +89,30 @@ class MenuTableSeeder extends Seeder
         $userlist->description = "显示用户列表";
         $userlist->url = "/user/list";
         $userlist->save();
+
+        /*文章*/
+        $article = new Menu;
+        $article->name = "文章管理";
+        $article->parent_id = $top->id;
+        $article->slug = "show.article.manage";
+        $article->description = "显示文章管理";
+        $article->url = "";
+        $article->save();
+
+        $articleList = new Menu;
+        $articleList->name = "文章列表";
+        $articleList->parent_id = $article->id;
+        $articleList->slug = "show.article.list";
+        $articleList->description = "显示文章列表";
+        $articleList->url = "/article/list";
+        $articleList->save();
+
+        $addArticle = new Menu;
+        $addArticle->name = "添加文章";
+        $addArticle->parent_id = $article->id;
+        $addArticle->slug = "add.articles";
+        $addArticle->description = "添加";
+        $addArticle->url = "/article/add";
+        $addArticle->save();
     }
 }
