@@ -24,13 +24,13 @@ License: You must have a valid license purchased only from themeforest(the above
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="" name="description"/>
 <meta content="" name="author"/>
-<base href="http://newhskyblog.me:8080/" />
+<base href="/" />
 
 <!-- BEGIN GLOBAL MANDATORY STYLES -->
-<link href="{{asset('global/plugins/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css"/>
-<link href="{{asset('global/plugins/simple-line-icons/simple-line-icons.min.css')}}" rel="stylesheet" type="text/css"/>
-<link href="{{asset('global/plugins/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css"/>
-<link href="{{asset('global/plugins/uniform/css/uniform.default.css')}}" rel="stylesheet" type="text/css"/>
+<link href="{{asset('components/font-awesome-4.4.0/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css">
+<link href="{{asset('components/Simple-Line-Icons-Webfont/simple-line-icons.css')}}" rel="stylesheet" type="text/css"/>
+<link href="{{asset('components/bootstrap/dist/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css"/>
+<link href="{{asset('components/uniform/themes/default/css/uniform.default.css')}}" rel="stylesheet" type="text/css"/>
 <link href="{{asset('global/plugins/typeahead/typeahead.css')}}" rel="stylesheet" type="text/css"/>
 
 <!-- END GLOBAL MANDATORY STYLES -->
@@ -166,9 +166,6 @@ License: You must have a valid license purchased only from themeforest(the above
 		});
 	</script>
 
-	<script type="text/javascript">
-		// angular.element(document.getElementsByTagName('head')).append(angular.element('<base href="' + window.location.pathname + '" />'));
-	</script>
 	<!-- END JAVASCRIPTS -->
 </body>
 <!-- END BODY -->
