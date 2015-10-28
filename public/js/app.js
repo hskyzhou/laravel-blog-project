@@ -559,6 +559,79 @@ MetronicApp.config(['$stateProvider', '$urlRouterProvider', '$locationProvider',
                     ]);
                 }] 
             }
+        })
+        .state('log', {
+            url: "/log",
+            templateUrl: "/log/ng-index",
+            data: {pageTitle: 'AngularJS File Upload'},
+            // controller: "GeneralPageController",
+            resolve: {
+                deps: ['$ocLazyLoad', function($ocLazyLoad) {
+                    return $ocLazyLoad.load([
+                    {
+                        name: 'MetronicApp',
+                        files: [
+                            
+                        ]
+                    }]);
+                }]
+            }
+        })
+        .state('log.list', {
+            url: "/list",
+            templateUrl: "/log-viewer/logs",
+            data: {pageTitle: '日志列表'},
+            // controller: "ArticleListController",
+            resolve: {
+                deps: ['$ocLazyLoad', function($ocLazyLoad) {
+                    return $ocLazyLoad.load([
+                        {
+                            name: 'MetronicApp',
+                            insertBefore: '#ng_load_plugins_before', // load the above css files before '#ng_load_plugins_before'
+                            files: [
+                            ]   
+                        },
+                    ]);
+                }] 
+            }
+        })
+        .state('log.overall', {
+            url: "/overall",
+            templateUrl: "/log-viewer",
+            data: {pageTitle: '日志总览'},
+            // controller: "ArticleListController",
+            resolve: {
+                deps: ['$ocLazyLoad', function($ocLazyLoad) {
+                    return $ocLazyLoad.load([
+                        {
+                            name: 'MetronicApp',
+                            insertBefore: '#ng_load_plugins_before', // load the above css files before '#ng_load_plugins_before'
+                            files: [
+                            ]   
+                        },
+                    ]);
+                }] 
+            }
+        })
+        .state('log.detail', {
+            url: "/detail/:id",
+            templateUrl: function(stateParams){
+                return "/log-viewer/logs/" + stateParams.id;
+            },
+            data: {pageTitle: '日志详情'},
+            // controller: "ArticleListController",
+            resolve: {
+                deps: ['$ocLazyLoad', function($ocLazyLoad) {
+                    return $ocLazyLoad.load([
+                        {
+                            name: 'MetronicApp',
+                            insertBefore: '#ng_load_plugins_before', // load the above css files before '#ng_load_plugins_before'
+                            files: [
+                            ]
+                        },
+                    ]);
+                }] 
+            }
         });
         
 }]);

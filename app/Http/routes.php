@@ -23,10 +23,8 @@ Route::post('auth/register', 'Auth\AuthController@postRegister');
 Route::group(['middleware' => ['auth', 'before.menu'], 'namespace' => 'Admin'], function(){
 	// 配置后台首页
 	Route::controller('admin', 'AdminController');
-
 	/*文章*/
 	Route::controller('article', 'ArticleController');
-
 	/*菜单*/
 	Route::controller('menu', 'MenuController');
 	/*角色*/
@@ -35,7 +33,8 @@ Route::group(['middleware' => ['auth', 'before.menu'], 'namespace' => 'Admin'], 
 	Route::controller('permission', 'PermissionController');
 	/*用户*/
 	Route::controller('user', 'UserController');
-
+	/*日志*/
+	Route::controller('log', 'LogController');
 });
 
 /*前台路由组*/
