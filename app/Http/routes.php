@@ -34,7 +34,12 @@ Route::group(['middleware' => ['auth', 'before.menu'], 'namespace' => 'Admin'], 
 	/*用户*/
 	Route::controller('user', 'UserController');
 	/*日志*/
-	Route::controller('log', 'LogController');
+	Route::controller('log', 'LogController', [
+		'getDetail' => 'log.detail',
+		'getList' => 'log.list',
+		'getType' => 'log.type',
+		'getDownload' => 'log.download'
+	]);
 });
 
 /*前台路由组*/

@@ -27,4 +27,12 @@ class LogController extends Controller
         return view('admin.log.index');
     }
 
+    public function getType(){
+        return view('admin.log.index');
+    }
+
+    public function getDownload(){
+        return view('admin.log.index');
+    }
+
 }

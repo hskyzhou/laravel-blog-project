@@ -10,7 +10,7 @@
                     {!! $item['icon'] !!} {{ $item['name'] }}
                 </a>
             @else
-                <a href="{{ $item['url'] }}" class="list-group-item {{ $level }}">
+                <a href="{{ route('log.type', [$log->date, $level]) }}" class="list-group-item {{ $level }}">
                     <span class="badge level-{{ $level }}">
                         {{ $item['count'] }}
                     </span>

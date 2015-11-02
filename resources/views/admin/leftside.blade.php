@@ -25,33 +25,6 @@
 			</form>
 			<!-- END RESPONSIVE QUICK SEARCH FORM -->
 		</li>
-		
-		{{--
-		<li class="start">
-			<a href="javascript:;">
-			<i class="icon-settings"></i>
-			<span class="title">AngularJS Features</span>
-			<span class="arrow "></span>
-			</a>
-			<ul class="sub-menu">
-				<li>
-					<a href="/admin/menu1">
-					<i class="icon-puzzle"></i> UI Bootstrap</span>
-					</a>
-				</li>
-				<li>
-					<a href="/admin/menu2">
-					<i class="icon-paper-clip"></i> File Upload</span>
-					</a>
-				</li>
-				<li>
-					<a href="/admin/menu3">
-					<i class="icon-check"></i> UI Select</span>
-					</a>
-				</li>
-			</ul>
-		</li>
-		--}}
 		@if(!empty($user_menus))
 			@foreach($user_menus as $user_menu)
 				@if(isset($user_menu['son']))

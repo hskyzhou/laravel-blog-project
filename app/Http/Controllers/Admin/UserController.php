@@ -16,6 +16,8 @@ use Bican\Roles\Models\Permission;
 
 use App\Services\Contracts\PermissionTreeContract;
 
+use Log;
+
 class UserController extends Controller
 {
     protected $current_user;
@@ -291,6 +293,7 @@ class UserController extends Controller
         $add_bool = $user->save();
 
         if($add_bool){
+            Log::info('add user: '. $user->id);
         	/*添加角色*/
         	$add_roles = request('roles', []);
         	if(!empty($add_roles)){

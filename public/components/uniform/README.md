@@ -3,7 +3,7 @@ Uniform
 
 Sexy form elements with jQuery. Now with HTML5 attributes!
 
-Version 2.1.2
+Version 2.1.1
 
 Works well with jQuery 1.6+, but we've received patches and heard that this works with jQuery 1.3.
 
@@ -65,13 +65,6 @@ You can pass in extra parameters to control certain aspects of Uniform. To pass 
       param1: value,
       param2: value,
       param3: value
-    });
-
-For example to translate upload button text and input holder to German:
-
-    $("select").uniform({
-      fileDefaultText: 'Keine Datei ausgewählt',
-      fileBtnText: 'Wählen Sie Datei',
     });
 
 There is a separate listing of global defaults.  You access them by using the `defaults` property.  *Note: This property name changed in v2.0.*

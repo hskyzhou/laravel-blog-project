@@ -123,24 +123,24 @@ License: You must have a valid license purchased only from themeforest(the above
 	<!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
 
 	<!-- BEGIN CORE JQUERY PLUGINS -->
-	<script src="{{asset('global/plugins/jquery.min.js')}}" type="text/javascript"></script>
-	<script src="{{asset('global/plugins/jquery-migrate.min.js')}}" type="text/javascript"></script>
-	<script src="{{asset('global/plugins/bootstrap/js/bootstrap.min.js')}}" type="text/javascript"></script>
-	<script src="{{asset('global/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js')}}" type="text/javascript"></script>
-	<script src="{{asset('global/plugins/jquery-slimscroll/jquery.slimscroll.min.js')}}" type="text/javascript"></script>
-	<script src="{{asset('global/plugins/jquery.blockui.min.js')}}" type="text/javascript"></script>
-	<script src="{{asset('global/plugins/jquery.cokie.min.js')}}" type="text/javascript"></script>
-	<script src="{{asset('global/plugins/uniform/jquery.uniform.min.js')}}" type="text/javascript"></script>	
+	<script src="{{asset('components/jquery/dist/jquery.min.js')}}" type="text/javascript"></script>
+	<script src="{{asset('components/jquery-migrate.min.js')}}" type="text/javascript"></script>
+	<script src="{{asset('components/js/bootstrap.min.js')}}" type="text/javascript"></script>
+	<script src="{{asset('components/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js')}}" type="text/javascript"></script>
+	<script src="{{asset('components/jquery.slimScroll/jquery.slimscroll.min.js')}}" type="text/javascript"></script>
+	<script src="{{asset('components/jquery.blockui.min.js')}}" type="text/javascript"></script>
+	<script src="{{asset('components/jquery.cokie.min.js')}}" type="text/javascript"></script>
+	<script src="{{asset('components/uniform/jquery.uniform.min.js')}}" type="text/javascript"></script>	
 	
 	<!-- END CORE JQUERY PLUGINS -->
 
 	<!-- BEGIN CORE ANGULARJS PLUGINS -->
-	<script src="{{asset('global/plugins/angularjs/angular.min.js')}}" type="text/javascript"></script>	
-	<script src="{{asset('global/plugins/angularjs/angular-sanitize.min.js')}}" type="text/javascript"></script>
-	<script src="{{asset('global/plugins/angularjs/angular-touch.min.js')}}" type="text/javascript"></script>	
-	<script src="{{asset('global/plugins/angularjs/plugins/angular-ui-router.min.js')}}" type="text/javascript"></script>
-	<script src="{{asset('global/plugins/angularjs/plugins/ocLazyLoad.min.js')}}" type="text/javascript"></script>
-	<script src="{{asset('global/plugins/angularjs/plugins/ui-bootstrap-tpls.min.js')}}" type="text/javascript"></script>
+	<script src="{{asset('components/angular/angular.min.js')}}" type="text/javascript"></script>	
+	<script src="{{asset('components/angular-sanitize/angular-sanitize.min.js')}}" type="text/javascript"></script>
+	<script src="{{asset('components/angular-touch/angular-touch.min.js')}}" type="text/javascript"></script>	
+	<script src="{{asset('components/angular-ui-router/release/angular-ui-router.min.js')}}" type="text/javascript"></script>
+	<script src="{{asset('components/oclazyload/dist/ocLazyLoad.min.js')}}" type="text/javascript"></script>
+	<script src="{{asset('components/ui-bootstrap-tpls.min.js')}}" type="text/javascript"></script>
 	<!-- END CORE ANGULARJS PLUGINS -->
 	
 	<!-- BEGIN APP LEVEL ANGULARJS SCRIPTS -->
@@ -149,13 +149,13 @@ License: You must have a valid license purchased only from themeforest(the above
 	<!-- END APP LEVEL ANGULARJS SCRIPTS -->
 
 	<!-- BEGIN APP LEVEL JQUERY SCRIPTS -->
-	<script src="{{asset('global/scripts/metronic.js')}}" type="text/javascript"></script>
+	<script src="{{asset('components/metronic.js')}}" type="text/javascript"></script>
 	<script src="{{asset('admin/layout/scripts/layout.js')}}" type="text/javascript"></script>
 	<script src="{{asset('admin/layout/scripts/quick-sidebar.js')}}" type="text/javascript"></script>
 	<script src="{{asset('admin/layout/scripts/demo.js')}}" type="text/javascript"></script>  
 	<script src="{{asset('components/layer/layer.js')}}" type="text/javascript"></script>
-	<script src="{{asset('global/plugins/typeahead/handlebars.min.js')}}" type="text/javascript"></script>
-	<script src="{{asset('global/plugins/typeahead/typeahead.bundle.min.js')}}" type="text/javascript"></script>
+	<script src="{{asset('components/typeahead/handlebars.min.js')}}" type="text/javascript"></script>
+	<script src="{{asset('components/typeahead/typeahead.bundle.min.js')}}" type="text/javascript"></script>
 	<!-- END APP LEVEL JQUERY SCRIPTS -->
 
 	<script type="text/javascript">

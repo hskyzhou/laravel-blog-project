@@ -581,7 +581,7 @@ MetronicApp.config(['$stateProvider', '$urlRouterProvider', '$locationProvider',
             url: "/list",
             templateUrl: "/log-viewer/logs",
             data: {pageTitle: '日志列表'},
-            // controller: "ArticleListController",
+            controller: "LogListController",
             resolve: {
                 deps: ['$ocLazyLoad', function($ocLazyLoad) {
                     return $ocLazyLoad.load([
@@ -589,6 +589,7 @@ MetronicApp.config(['$stateProvider', '$urlRouterProvider', '$locationProvider',
                             name: 'MetronicApp',
                             insertBefore: '#ng_load_plugins_before', // load the above css files before '#ng_load_plugins_before'
                             files: [
+                                '../../js/controllers/LogListController.js'
                             ]   
                         },
                     ]);
@@ -599,7 +600,7 @@ MetronicApp.config(['$stateProvider', '$urlRouterProvider', '$locationProvider',
             url: "/overall",
             templateUrl: "/log-viewer",
             data: {pageTitle: '日志总览'},
-            // controller: "ArticleListController",
+            controller: "LogOverallController",
             resolve: {
                 deps: ['$ocLazyLoad', function($ocLazyLoad) {
                     return $ocLazyLoad.load([
@@ -607,6 +608,8 @@ MetronicApp.config(['$stateProvider', '$urlRouterProvider', '$locationProvider',
                             name: 'MetronicApp',
                             insertBefore: '#ng_load_plugins_before', // load the above css files before '#ng_load_plugins_before'
                             files: [
+                                '../../../components/Chart.js/Chart.min.js',
+                                '../../js/controllers/LogOverallController.js',
                             ]   
                         },
                     ]);
@@ -614,12 +617,12 @@ MetronicApp.config(['$stateProvider', '$urlRouterProvider', '$locationProvider',
             }
         })
         .state('log.detail', {
-            url: "/detail/:id",
+            url: "/detail/:date",
             templateUrl: function(stateParams){
-                return "/log-viewer/logs/" + stateParams.id;
+                return "/log-viewer/logs/" + stateParams.date;
             },
             data: {pageTitle: '日志详情'},
-            // controller: "ArticleListController",
+            controller: "LogDetailController",
             resolve: {
                 deps: ['$ocLazyLoad', function($ocLazyLoad) {
                     return $ocLazyLoad.load([
@@ -627,6 +630,49 @@ MetronicApp.config(['$stateProvider', '$urlRouterProvider', '$locationProvider',
                             name: 'MetronicApp',
                             insertBefore: '#ng_load_plugins_before', // load the above css files before '#ng_load_plugins_before'
                             files: [
+                                '../../js/controllers/LogDetailController.js'
+                            ]
+                        },
+                    ]);
+                }] 
+            }
+        })
+        .state('log.type', {
+            url: "/type/:date/:type",
+            templateUrl: function(stateParams){
+                return "/log-viewer/logs/" + stateParams.date + "/"+ stateParams.type;
+            },
+            data: {pageTitle: '日志详情'},
+            controller: "GeneralPageController",
+            resolve: {
+                deps: ['$ocLazyLoad', function($ocLazyLoad) {
+                    return $ocLazyLoad.load([
+                        {
+                            name: 'MetronicApp',
+                            insertBefore: '#ng_load_plugins_before', // load the above css files before '#ng_load_plugins_before'
+                            files: [
+                                '../../js/controllers/GeneralPageController.js'
+                            ]
+                        },
+                    ]);
+                }] 
+            }
+        })
+        .state('log.download', {
+            url: "/download/:date",
+            templateUrl: function(stateParams){
+                return "/log-viewer/logs/" + stateParams.date + "/download";
+            },
+            data: {pageTitle: '日志详情'},
+            controller: "GeneralPageController",
+            resolve: {
+                deps: ['$ocLazyLoad', function($ocLazyLoad) {
+                    return $ocLazyLoad.load([
+                        {
+                            name: 'MetronicApp',
+                            insertBefore: '#ng_load_plugins_before', // load the above css files before '#ng_load_plugins_before'
+                            files: [
+                                '../../js/controllers/GeneralPageController.js'
                             ]
                         },
                     ]);

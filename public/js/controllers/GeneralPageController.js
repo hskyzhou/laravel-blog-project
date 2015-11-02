@@ -5,7 +5,7 @@ MetronicApp.controller('GeneralPageController', ['$rootScope', '$scope', 'settin
     	Metronic.initAjax();
 
     	// set default layout mode
-        $rootScope.settings.layout.pageBodySolid = false;
+        $rootScope.settings.layout.pageBodySolid = true;
         $rootScope.settings.layout.pageSidebarClosed = false;
     });
 }]);
