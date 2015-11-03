@@ -27,11 +27,17 @@ License: You must have a valid license purchased only from themeforest(the above
 <base href="/" />
 
 <!-- BEGIN GLOBAL MANDATORY STYLES -->
-<link href="{{asset('components/font-awesome-4.4.0/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css">
+{{-- <link href="{{asset('components/font-awesome-4.4.0/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css">
 <link href="{{asset('components/Simple-Line-Icons-Webfont/simple-line-icons.css')}}" rel="stylesheet" type="text/css"/>
 <link href="{{asset('components/bootstrap/dist/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css"/>
 <link href="{{asset('components/uniform/themes/default/css/uniform.default.css')}}" rel="stylesheet" type="text/css"/>
-<link href="{{asset('global/plugins/typeahead/typeahead.css')}}" rel="stylesheet" type="text/css"/>
+<link href="{{asset('global/plugins/typeahead/typeahead.css')}}" rel="stylesheet" type="text/css"/> --}}
+
+<link href="{{asset('global/plugins/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css"/>
+<link href="{{asset('global/plugins/simple-line-icons/simple-line-icons.min.css')}}" rel="stylesheet" type="text/css"/>
+<link href="{{asset('global/plugins/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css"/>
+<link href="{{asset('global/plugins/uniform/css/uniform.default.css')}}" rel="stylesheet" type="text/css"/>
+<link href="{{asset('global/plugins/bootstrap-switch/css/bootstrap-switch.min.css')}}" rel="stylesheet" type="text/css"/>
 
 <!-- END GLOBAL MANDATORY STYLES -->
 
@@ -46,6 +52,7 @@ License: You must have a valid license purchased only from themeforest(the above
 <link href="{{asset('admin/layout/css/layout.css')}}" rel="stylesheet" type="text/css"/>
 <link href="{{asset('admin/layout/css/themes/darkblue.css')}}" rel="stylesheet" type="text/css" id="style_color"/>
 <link href="{{asset('admin/layout/css/custom.css')}}" rel="stylesheet" type="text/css"/>
+
 <!-- END THEME STYLES -->
 
 <link rel="shortcut icon" href="favicon.ico"/>
@@ -124,23 +131,24 @@ License: You must have a valid license purchased only from themeforest(the above
 
 	<!-- BEGIN CORE JQUERY PLUGINS -->
 	<script src="{{asset('components/jquery/dist/jquery.min.js')}}" type="text/javascript"></script>
-	<script src="{{asset('components/jquery-migrate.min.js')}}" type="text/javascript"></script>
-	<script src="{{asset('components/js/bootstrap.min.js')}}" type="text/javascript"></script>
-	<script src="{{asset('components/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js')}}" type="text/javascript"></script>
-	<script src="{{asset('components/jquery.slimScroll/jquery.slimscroll.min.js')}}" type="text/javascript"></script>
+	<script src="{{asset('global/plugins/jquery-migrate.min.js')}}" type="text/javascript"></script>
+	<script src="{{asset('components/bootstrap/dist/js/bootstrap.min.js')}}" type="text/javascript"></script>
+	<script src="{{asset('global/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js')}}" type="text/javascript"></script>
+	<script src="{{asset('global/plugins/jquery-slimscroll/jquery.slimscroll.min.js')}}" type="text/javascript"></script>
 	<script src="{{asset('components/jquery.blockui.min.js')}}" type="text/javascript"></script>
 	<script src="{{asset('components/jquery.cokie.min.js')}}" type="text/javascript"></script>
 	<script src="{{asset('components/uniform/jquery.uniform.min.js')}}" type="text/javascript"></script>	
+	<script src="{{asset('global/plugins/bootstrap-switch/js/bootstrap-switch.min.js')}}" type="text/javascript"></script>
 	
 	<!-- END CORE JQUERY PLUGINS -->
 
 	<!-- BEGIN CORE ANGULARJS PLUGINS -->
-	<script src="{{asset('components/angular/angular.min.js')}}" type="text/javascript"></script>	
-	<script src="{{asset('components/angular-sanitize/angular-sanitize.min.js')}}" type="text/javascript"></script>
-	<script src="{{asset('components/angular-touch/angular-touch.min.js')}}" type="text/javascript"></script>	
-	<script src="{{asset('components/angular-ui-router/release/angular-ui-router.min.js')}}" type="text/javascript"></script>
-	<script src="{{asset('components/oclazyload/dist/ocLazyLoad.min.js')}}" type="text/javascript"></script>
-	<script src="{{asset('components/ui-bootstrap-tpls.min.js')}}" type="text/javascript"></script>
+	<script src="{{asset('global/plugins/angularjs/angular.min.js')}}" type="text/javascript"></script>	
+	<script src="{{asset('global/plugins/angularjs/angular-sanitize.min.js')}}" type="text/javascript"></script>
+	<script src="{{asset('global/plugins/angularjs/angular-touch.min.js')}}" type="text/javascript"></script>	
+	<script src="{{asset('global/plugins/angularjs/plugins/angular-ui-router.min.js')}}" type="text/javascript"></script>
+	<script src="{{asset('global/plugins/angularjs/plugins/ocLazyLoad.min.js')}}" type="text/javascript"></script>
+	<script src="{{asset('global/plugins/angularjs/plugins/ui-bootstrap-tpls.min.js')}}" type="text/javascript"></script>
 	<!-- END CORE ANGULARJS PLUGINS -->
 	
 	<!-- BEGIN APP LEVEL ANGULARJS SCRIPTS -->
@@ -149,7 +157,7 @@ License: You must have a valid license purchased only from themeforest(the above
 	<!-- END APP LEVEL ANGULARJS SCRIPTS -->
 
 	<!-- BEGIN APP LEVEL JQUERY SCRIPTS -->
-	<script src="{{asset('components/metronic.js')}}" type="text/javascript"></script>
+	<script src="{{asset('global/scripts/metronic.js')}}" type="text/javascript"></script>
 	<script src="{{asset('admin/layout/scripts/layout.js')}}" type="text/javascript"></script>
 	<script src="{{asset('admin/layout/scripts/quick-sidebar.js')}}" type="text/javascript"></script>
 	<script src="{{asset('admin/layout/scripts/demo.js')}}" type="text/javascript"></script>  

@@ -180,5 +180,24 @@ class PermissionSeeder extends Seeder
             'slug' => 'delete.articles',
             'description' => '删除文章', // optional
         ]);
+
+        /*日志*/
+        $logManage = Permission::create([
+            'name' => 'Show Log Manage',
+            'slug' => 'show.log.manage',
+            'description' => '日志管理', // optional
+        ]);
+
+        $logOverall = Permission::create([
+            'name' => 'Show Log List',
+            'slug' => 'show.log.list',
+            'description' => '日志总览', // optional
+        ]);
+
+        $logDetail = Permission::create([
+            'name' => 'show Log Detail',
+            'slug' => 'show.log.detail',
+            'description' => '日志详情', // optional
+        ]);
     }
 }

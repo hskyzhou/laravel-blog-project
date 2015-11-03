@@ -11,14 +11,14 @@ class MenuController extends Controller
 {
     public function getIndex(){
         // echo 'aaaa';
-        return view('menu.index');
+        return view('front.index');
     }
 
     public function getTest(){
-        return view('menu.test');
+        return view('front.test');
     }
 
     public function getDemo(){
-        return view('menu.demo');
+        return view('front.demo');
     }
 }

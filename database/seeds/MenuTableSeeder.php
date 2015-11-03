@@ -114,5 +114,30 @@ class MenuTableSeeder extends Seeder
         $addArticle->description = "添加";
         $addArticle->url = "/article/add";
         $addArticle->save();
+
+        /*日志*/
+        $log = new Menu;
+        $log->name = "日志管理";
+        $log->parent_id = $top->id;
+        $log->slug = "show.log.manage";
+        $log->description = "显示文章管理";
+        $log->url = "";
+        $log->save();
+
+        $logOverall = new Menu;
+        $logOverall->name = "日志总览";
+        $logOverall->parent_id = $log->id;
+        $logOverall->slug = "show.log.list";
+        $logOverall->description = "显示日志总览";
+        $logOverall->url = "/log/overall";
+        $logOverall->save();
+
+        $logDetail = new Menu;
+        $logDetail->name = "日志详情";
+        $logDetail->parent_id = $log->id;
+        $logDetail->slug = "show.log.detail";
+        $logDetail->description = "显示日志详情";
+        $logDetail->url = "/log/detail";
+        $logDetail->save();
     }
 }

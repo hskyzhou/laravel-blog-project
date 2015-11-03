@@ -4761,10 +4761,10 @@ th {
         padding-top: 30px;
     }
     .site-header .navbar-default .navbar-nav > li > a {
-        color: #5d5d5d;
+        /*color: #5d5d5d;*/
         font-size: 11px;
         font-weight: 100;
-        border-bottom: 2px solid #ffffff;
+        /*border-bottom: 2px solid #ffffff;*/
         text-transform: uppercase;
     }
     .navbar-default .navbar-nav > li > a:hover {

@@ -10,6 +10,7 @@
 | and give it the controller to call when that URI is requested.
 |
 */
+
 // Authentication routes...
 Route::get('auth/login', 'Auth\AuthController@getLogin');
 Route::post('auth/login', 'Auth\AuthController@postLogin');
@@ -43,15 +44,13 @@ Route::group(['middleware' => ['auth', 'before.menu'], 'namespace' => 'Admin'], 
 });
 
 /*前台路由组*/
-Route::group(['namespace' => 'Front', 'prefix' => 'hsky'], function(){
-	Route::get('index', 'IndexController@index');
-	Route::get('detail/{id}', ['as' => 'detail', 'uses' => 'IndexController@detail']);
-	Route::get('list/{id?}', ['as' => 'list', 'uses' => 'IndexController@listpage']);
-	Route::get('markdown', 'IndexController@markdown');
+Route::get('/', 'Front\IndexController@index');
+Route::group(['namespace' => 'Front'], function(){
+	Route::controller('articles', 'IndexController', [
+		'getDetail' => 'articles.detail',
+		'getList' => 'articles.list'
+	]);
 });
 
 
-/**/
-// Route::controller('menu', 'MenuController');
-
-
+Route::controller('demo', 'MenuController');
