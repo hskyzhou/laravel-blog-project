@@ -15,7 +15,7 @@ class IndexController extends Controller
 {
     public function index(){
         /*获取文章*/
-        $articles = Article::limit(6)->get();
+        $articles = Article::limit(4)->get();
 
         return view('front.index')->with(compact('articles'));
     }

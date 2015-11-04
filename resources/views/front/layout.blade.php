@@ -49,13 +49,10 @@
 			<script src="{{asset('components/jquery/dist/jquery.min.js')}}"></script>
 			<script src="{{asset('components/bootstrap/dist/js/bootstrap.min.js')}}"></script>
 
-			{{-- // <script src="{{asset('components/angular/angular.min.js')}}"></script> --}}
-			<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular.min.js"></script>
+			<script src="{{asset('components/angular/angular.min.js')}}"></script>
 			<script src="{{asset('hsky/jquery.sticky.js')}}"></script>
 			<script src="{{asset('components/ngSticky/dist/sticky.min.js')}}"></script>
-			{{-- // <script src="{{asset('components/angular-scroll/angular-scroll.min.js')}}"></script> --}}
-			<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-scroll/0.7.3/angular-scroll.js"></script>
-
+			<script src="{{asset('components/angular-scroll/angular-scroll.min.js')}}"></script>
 		@show
 
 		@section('custom_js')

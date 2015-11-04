@@ -1,4 +1,4 @@
-var hsky = angular.module('hsky', ['sticky', 'duScroll', 'angular-momentum-scroll']);
+var hsky = angular.module('hsky', ['sticky', 'duScroll', 'angular-momentum-scroll', 'sticky']);
 
 hsky.controller('MainController', ['$scope', '$document', function($scope, $document){
 	/*sticky*/
