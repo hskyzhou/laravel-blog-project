@@ -137,7 +137,7 @@ class MenuTableSeeder extends Seeder
         $logDetail->parent_id = $log->id;
         $logDetail->slug = "show.log.detail";
         $logDetail->description = "显示日志详情";
-        $logDetail->url = "/log/detail";
+        $logDetail->url = "/log/list";
         $logDetail->save();
     }
 }
