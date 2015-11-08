@@ -1,0 +1,11 @@
+/* Swift Woocommerce styles */
+.woocommerce ul.cart_list li a,
+.woocommerce ul.product_list_widget li a {
+	font-weight:400;
+	}
+.woocommerce ul.product_list_widget .reviewer {
+	color:#939393;
+	}	
+.price .amount {
+	color:#3d3d3d;
+	}	

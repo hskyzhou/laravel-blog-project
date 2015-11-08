@@ -17,13 +17,13 @@
 							<div class="col-md-8 hsky-post-header">
 							   	<div class="row">
 									<p class="hsky-post-item">
-										<span class="hsky-post-span"><i class="fa fa-clock-o"></i> Feb 11</span>
+										<span class="hsky-post-span"><i class="fa fa-clock-o"></i>{{$article['created_at']->toDateString()}}</span>
 										<span class="hsky-post-span">
 											<i class="fa fa-folder-o"></i>
-											<a href="{{route('articles.list')}}" rel="category tag">Lifestyle</a>
+											<a href="{{route('articles.list')}}" rel="category tag">{{$article['catagory']}}</a>
 										</span>
 								        <span class="hsky-post-span">
-								        	<a href="#" class="jm-post-like" data-post_id="1328" title="Like"><i class="fa fa-heart-o"></i>&nbsp;5</a>
+								        	<a href="#" class="jm-post-like" data-post_id="1328" title="Like"><i class="fa fa-heart-o"></i>&nbsp;0</a>
 								        </span>
 								    </p>
 								    <h2 class="hsky-post-title">

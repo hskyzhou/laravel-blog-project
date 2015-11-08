@@ -9,6 +9,8 @@ use App\Http\Controllers\Controller;
 use App\Nav;
 use App\Article;
 
+use Carbon\Carbon;
+
 use Markdown;
 
 class IndexController extends Controller
@@ -17,7 +19,7 @@ class IndexController extends Controller
         /*获取文章*/
         $articles = Article::limit(4)->get();
 
-        return view('front.index')->with(compact('articles'));
+        return view('front.index1')->with(compact('articles'));
     }
 
     /**
@@ -32,7 +34,7 @@ class IndexController extends Controller
      * @return        
      */
     public function getList($id){
-        return view('index.list');
+        return view('front.list');
     }
 
     /**
@@ -51,6 +53,10 @@ class IndexController extends Controller
         $returnData = [
             'article' => $article,
         ];
-        return view('index.detail')->with($returnData);
+        return view('front.detail')->with($returnData);
+    }
+
+    public function getTest(){
+        return view('front.test');
     }
 }
