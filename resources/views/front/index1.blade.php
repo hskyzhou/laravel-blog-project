@@ -3,177 +3,96 @@
 @section('content')
 	<div id="content" class="site-content section">
 		<div class="container">
-			<h1 class="entry-title archive-title">Category: Love &amp; Life</h1>
+			{{-- <h1 class="entry-title archive-title">Category: Love &amp; Life</h1> --}}
 			<div class="row">
 				<!-- Start Loop Posts -->
 				<div class="col-md-8 col-lg-8 col-sm-12  main-left">
 					<div class="blog-section section-blog-list ">
-						<div id="post-612" class="blog-item ts-article-list post-612 post type-post status-publish format-standard has-post-thumbnail hentry category-love-life">
-							<div class="img-post post-thumbnail post-thumbnail-hover14">
-								<figure>
-									<a href="http://swift.themestudio.net/morbi-quis-neque-vitae-turpis-commodo/">
-										<img class="swift-lazy-loading-image" alt="Morbi quis neque vitae turpis commodo" src="http://swift.themestudio.net/wp-content/uploads/2015/09/440d9cf2f085ab73b22318d48e6eea8ae3af31.jpg" style="display: inline-block;">
+						@foreach($articles as $article)
+							<div id="post-612" class="blog-item ts-article-list post-612 post type-post status-publish format-standard has-post-thumbnail hentry category-love-life">
+								<div class="img-post post-thumbnail post-thumbnail-hover14">
+									<figure>
+										<a href="http://swift.themestudio.net/morbi-quis-neque-vitae-turpis-commodo/">
+											<img class="swift-lazy-loading-image" alt="Morbi quis neque vitae turpis commodo" src="http://swift.themestudio.net/wp-content/uploads/2015/09/440d9cf2f085ab73b22318d48e6eea8ae3af31.jpg" style="display: inline-block;">
 
-										<noscript>&lt;img src="http://swift.themestudio.net/wp-content/uploads/2015/09/440d9cf2f085ab73b22318d48e6eea8ae3af31.jpg" alt="Morbi quis neque vitae turpis commodo" /&gt;</noscript>
-									</a>
-								</figure>
-							</div>
+											<noscript>&lt;img src="http://swift.themestudio.net/wp-content/uploads/2015/09/440d9cf2f085ab73b22318d48e6eea8ae3af31.jpg" alt="Morbi quis neque vitae turpis commodo" /&gt;</noscript>
+										</a>
+									</figure>
+								</div>
 
-							<div class="entry-meta">
-								<!-- Date time -->
-								<span class="posted-on">
-									<i class="fa fa-clock-o"></i>
-									<span class="screen-reader-text">Posted on </span>
-									<a href="http://swift.themestudio.net/morbi-quis-neque-vitae-turpis-commodo/" rel="bookmark">
-										<time class="entry-date published" datetime="2015-09-21T17:29:34+00:00">September 21, 2015</time>
-										<time class="updated screen-reader-text" datetime="2015-09-23T20:03:04+00:00">September 23, 2015</time>
-									</a>
-								</span>
+								<div class="entry-meta">
+									<!-- Date time -->
+									<span class="posted-on">
+										<i class="fa fa-clock-o"></i>
+										<span class="screen-reader-text">Posted on </span>
+										<a href="http://swift.themestudio.net/morbi-quis-neque-vitae-turpis-commodo/" rel="bookmark">
+											<time class="entry-date published" datetime="2015-09-21T17:29:34+00:00">{{ $article->created_at->toDateString() }}</time>
+										</a>
+									</span>
 
-								<!-- Categories -->
-								<span class="cat-links"><i class="fa fa-bookmark"></i>
-									<span class="screen-reader-text">Categories </span>
-									<a href="http://swift.themestudio.net/category/love-life/" rel="category tag">Love &amp; Life</a>
-								</span>
+									<!-- Categories -->
+									<span class="cat-links"><i class="fa fa-bookmark"></i>
+										<span class="screen-reader-text">Categories</span>
+										<a href="http://swift.themestudio.net/category/love-life/" rel="category tag">{{ $article->catagory }}</a>
+									</span>
 
-								<!-- Tags -->
+									<!-- Tags -->
 
-								<span class="comments-link">
-									<i class="fa fa-comments"></i>
-									<a href="http://swift.themestudio.net/morbi-quis-neque-vitae-turpis-commodo/#respond">Leave a comment
+									<span class="comments-link">
+										<i class="fa fa-comments"></i>
+										<a href="http://swift.themestudio.net/morbi-quis-neque-vitae-turpis-commodo/#respond">Leave a comment
+											<span class="screen-reader-text"> on Morbi quis neque vitae turpis commodo</span>
+										</a>
+									</span>
+								</div>
+
+								<h3 class="entry-title bg-title">
+									<a href="http://swift.themestudio.net/morbi-quis-neque-vitae-turpis-commodo/">{{ $article->title }}</a>
+								</h3>
+
+								<div class="content-post the-excerpt-content">
+									<p>
+										{{ str_limit(strip_tags($article->html_content), 40)}}
+									</p>
+								</div>
+
+								<div class="article-bottom clearfix">
+									<div class="social-icon">
+										<a class="style1" href="https://www.facebook.com/sharer/sharer.php?u=http://swift.themestudio.net/morbi-quis-neque-vitae-turpis-commodo/" target="_blank">
+											<span class="screen-reader-text">Share Morbi quis neque vitae turpis commodo on FaceBook</span>
+											<i class="fa fa-facebook"></i>
+										</a>
+
+										<a class="style2" href="https://twitter.com/home?status=http://swift.themestudio.net/morbi-quis-neque-vitae-turpis-commodo/" target="_blank">
+											<span class="screen-reader-text">Share Morbi quis neque vitae turpis commodo on Twitter</span>
+											<i class="fa fa-twitter"></i>
+										</a>
+
+										<a class="style3" href="http://www.tumblr.com/share/link?url=http://swift.themestudio.net/morbi-quis-neque-vitae-turpis-commodo/" target="_blank">
+											<span class="screen-reader-text">Share Morbi quis neque vitae turpis commodo on Tumblr</span>
+											<i class="fa fa-tumblr"></i>
+										</a>
+
+										<a class="style4" href="http://reddit.com/submit?url=http://swift.themestudio.net/morbi-quis-neque-vitae-turpis-commodo/&amp;title=Morbiquisnequevitaeturpiscommodo" target="_blank">
+											<span class="screen-reader-text">Share Morbi quis neque vitae turpis commodo on Github</span>
+											<i class="fa fa-github-alt"></i>
+										</a>
+
+										<a class="style6" href="https://dribbble.com/?url=http://swift.themestudio.net/morbi-quis-neque-vitae-turpis-commodo/" target="_blank">
+											<span class="screen-reader-text">Share Morbi quis neque vitae turpis commodo on Dribbble</span>
+											<i class="fa fa-dribbble"></i>
+										</a>
+									</div>
+
+									<div class="read-more">
 										<span class="screen-reader-text"> on Morbi quis neque vitae turpis commodo</span>
-									</a>
-								</span>
-							</div>
-
-							<h3 class="entry-title bg-title">
-								<a href="http://swift.themestudio.net/morbi-quis-neque-vitae-turpis-commodo/">Morbi quis neque vitae turpis commodo</a>
-							</h3>
-
-							<div class="content-post the-excerpt-content">
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis cursus dignissim purus, sit amet egestas enim. Mauris mollis lacinia massa eu imperdiet. Praesent quam urna, facilisis nec facilisis sit amet, facilisis ut enim. Aliquam nisi leo, imperdiet sed rhoncus non, tristique vel tortor. ...</p>
-							</div>
-
-							<div class="article-bottom clearfix">
-								<div class="social-icon">
-									<a class="style1" href="https://www.facebook.com/sharer/sharer.php?u=http://swift.themestudio.net/morbi-quis-neque-vitae-turpis-commodo/" target="_blank">
-										<span class="screen-reader-text">Share Morbi quis neque vitae turpis commodo on FaceBook</span>
-										<i class="fa fa-facebook"></i>
-									</a>
-
-									<a class="style2" href="https://twitter.com/home?status=http://swift.themestudio.net/morbi-quis-neque-vitae-turpis-commodo/" target="_blank">
-										<span class="screen-reader-text">Share Morbi quis neque vitae turpis commodo on Twitter</span>
-										<i class="fa fa-twitter"></i>
-									</a>
-
-									<a class="style3" href="http://www.tumblr.com/share/link?url=http://swift.themestudio.net/morbi-quis-neque-vitae-turpis-commodo/" target="_blank">
-										<span class="screen-reader-text">Share Morbi quis neque vitae turpis commodo on Tumblr</span>
-										<i class="fa fa-tumblr"></i>
-									</a>
-
-									<a class="style4" href="http://reddit.com/submit?url=http://swift.themestudio.net/morbi-quis-neque-vitae-turpis-commodo/&amp;title=Morbiquisnequevitaeturpiscommodo" target="_blank">
-										<span class="screen-reader-text">Share Morbi quis neque vitae turpis commodo on Github</span>
-										<i class="fa fa-github-alt"></i>
-									</a>
-
-									<a class="style6" href="https://dribbble.com/?url=http://swift.themestudio.net/morbi-quis-neque-vitae-turpis-commodo/" target="_blank">
-										<span class="screen-reader-text">Share Morbi quis neque vitae turpis commodo on Dribbble</span>
-										<i class="fa fa-dribbble"></i>
-									</a>
-								</div>
-
-								<div class="read-more">
-									<span class="screen-reader-text"> on Morbi quis neque vitae turpis commodo</span>
-									<a href="http://swift.themestudio.net/morbi-quis-neque-vitae-turpis-commodo/">Read more
-										<i class="fa fa-chevron-right"></i>
-									</a>
+										<a href="http://swift.themestudio.net/morbi-quis-neque-vitae-turpis-commodo/">Read more
+											<i class="fa fa-chevron-right"></i>
+										</a>
+									</div>
 								</div>
 							</div>
-						</div>
-
-						<div id="post-428" class="blog-item ts-article-list post-428 post type-post status-publish format-standard has-post-thumbnail hentry category-love-life">
-							<div class="img-post post-thumbnail post-thumbnail-hover14">
-								<figure>
-									<a href="http://swift.themestudio.net/let-me-come-refresh-a-room-for-you/">
-										<img class="swift-lazy-loading-image" alt="Let Me Come Refresh a Room For You!" src="http://swift.themestudio.net/wp-content/uploads/2015/09/Life-of-Pix-free-stock-photos-biarritz-hotel-sea-lababineau-1440x960-1140x639.jpg" style="display: inline-block;">
-
-										<noscript>&lt;img src="http://swift.themestudio.net/wp-content/uploads/2015/09/Life-of-Pix-free-stock-photos-biarritz-hotel-sea-lababineau-1440x960-1140x639.jpg" alt="Let Me Come Refresh a Room For You!" /&gt;</noscript>
-									</a>
-								</figure>
-							</div>
-
-							<div class="entry-meta">
-								<!-- Date time -->
-								<span class="posted-on">
-									<i class="fa fa-clock-o"></i>
-									<span class="screen-reader-text">Posted on </span>
-									<a href="http://swift.themestudio.net/let-me-come-refresh-a-room-for-you/" rel="bookmark">
-										<time class="entry-date published" datetime="2015-09-06T08:58:40+00:00">September 6, 2015</time>
-										<time class="updated screen-reader-text" datetime="2015-09-26T16:09:54+00:00">September 26, 2015</time>
-									</a>
-								</span>
-
-        				<!-- Categories -->
-        				<span class="cat-links">
-        					<i class="fa fa-bookmark"></i>
-        					<span class="screen-reader-text">Categories </span>
-        					<a href="http://swift.themestudio.net/category/love-life/" rel="category tag">Love &amp; Life</a>
-        				</span>
-
-        				<!-- Tags -->
-        				<!-- Comment -->
-        				<span class="comments-link">
-        					<i class="fa fa-comments"></i>
-        					<a href="http://swift.themestudio.net/let-me-come-refresh-a-room-for-you/#respond">Leave a comment
-        						<span class="screen-reader-text"> on Let Me Come Refresh a Room For You!</span>
-        					</a>
-        				</span>
-        			</div>
-
-        			<h3 class="entry-title bg-title">
-        				<a href="http://swift.themestudio.net/let-me-come-refresh-a-room-for-you/">Let Me Come Refresh a Room For You!</a>
-        			</h3>
-
-        			<div class="content-post the-excerpt-content">
-        				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis cursus dignissim purus, sit amet egestas enim. Mauris mollis lacinia massa eu imperdiet. Praesent quam urna, facilisis nec facilisis sit amet, facilisis ut enim. Aliquam nisi leo, imperdiet sed rhoncus non, tristique vel tortor. ...</p>
-        			</div>
-
-        			<div class="article-bottom clearfix">
-        				<div class="social-icon">
-        					<a class="style1" href="https://www.facebook.com/sharer/sharer.php?u=http://swift.themestudio.net/let-me-come-refresh-a-room-for-you/" target="_blank">
-        						<span class="screen-reader-text">Share Let Me Come Refresh a Room For You! on FaceBook</span>
-        						<i class="fa fa-facebook"></i>
-        					</a>
-
-        					<a class="style2" href="https://twitter.com/home?status=http://swift.themestudio.net/let-me-come-refresh-a-room-for-you/" target="_blank">
-        						<span class="screen-reader-text">Share Let Me Come Refresh a Room For You! on Twitter</span>
-        						<i class="fa fa-twitter"></i>
-        					</a>
-
-        					<a class="style3" href="http://www.tumblr.com/share/link?url=http://swift.themestudio.net/let-me-come-refresh-a-room-for-you/" target="_blank">
-        						<span class="screen-reader-text">Share Let Me Come Refresh a Room For You! on Tumblr</span>
-        						<i class="fa fa-tumblr"></i>
-        					</a>
-
-        					<a class="style4" href="http://reddit.com/submit?url=http://swift.themestudio.net/let-me-come-refresh-a-room-for-you/&amp;title=LetMeComeRefreshaRoomForYou!" target="_blank">
-        						<span class="screen-reader-text">Share Let Me Come Refresh a Room For You! on Github</span>
-        						<i class="fa fa-github-alt"></i>
-        					</a>
-
-        					<a class="style6" href="https://dribbble.com/?url=http://swift.themestudio.net/let-me-come-refresh-a-room-for-you/" target="_blank">
-        						<span class="screen-reader-text">Share Let Me Come Refresh a Room For You! on Dribbble</span>
-        						<i class="fa fa-dribbble"></i>
-        					</a>
-        				</div>
-
-        				<div class="read-more">
-        					<span class="screen-reader-text"> on Let Me Come Refresh a Room For You!</span>
-        					<a href="http://swift.themestudio.net/let-me-come-refresh-a-room-for-you/">Read more
-        						<i class="fa fa-chevron-right"></i>
-        					</a>
-        				</div>
-        			</div>
-        		</div>
+						@endforeach
         	</div>
         </div>
         <!-- End Loop Posts -->
